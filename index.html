@@ -1,0 +1,434 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Shreyas Taralekar - Software Developer, Full Stack Developer, Android Developer, and AI/ML Engineer.">
+  <title>Shreyas Taralekar | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="bg-orb orb-1" aria-hidden="true"></div>
+  <div class="bg-orb orb-2" aria-hidden="true"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container nav-shell">
+      <a href="#home" class="brand" aria-label="Go to top">
+        <span class="brand-mark">ST</span>
+        <span class="brand-text"><p class="stat-value"><strong>WELCOME !</strong>
+              <p class="stat-label">To Shreyas's Portfolio..</p></span>
+      </a>
+
+      <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+        <span class="menu-lines" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+        <span class="sr-only">Menu</span>
+      </button>
+
+      <nav id="site-nav" class="site-nav">
+        <a href="#home">Home</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#contact">Contact</a>
+
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero section">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">B.Tech Computer Science Engineer</p>
+          <h1>Building reliable software for web, mobile, and AI experiences.</h1>
+          <p class="intro">
+            I am <strong>Shreyas Taralekar</strong>, a motivated Computer Science graduate focused on
+            <strong>Full Stack Development</strong>, <strong>Android Development</strong>, and <strong>AI/ML Engineering</strong>.
+            I build practical products that solve real problems at scale.
+          </p>
+          <p class="role-line">
+            Open to roles as
+            <span id="typed-role" class="typed-role">Software Developer</span>
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="assets/Shreyas_Taralekar_Resume.pdf" download class="btn btn-ghost">Download Resume</a>
+          </div>
+
+          <div class="social-links hero-social">
+            <a id="hero-mail-link" href="mailto:shreyastaralekar28@gmail.com" title="Email Shreyas" class="social-link email-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span>Email</span>
+            </a>
+            <a href="tel:+919359996215" title="Call Shreyas" class="social-link phone-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <span>Phone</span>
+            </a>
+            <a href="https://linkedin.com/in/shreyas-taralekar" target="_blank" rel="noreferrer" title="Visit LinkedIn" class="social-link linkedin-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"></path>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://github.com/shreyastaralekar" target="_blank" rel="noreferrer" title="Visit GitHub" class="social-link github-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+              </svg>
+              <span>GitHub</span>
+            </a>
+          </div>
+        </div>
+
+        <aside class="hero-card tilt-card">
+          <h2>Profile Snapshot</h2>
+          <ul>
+            <li><span>Internship</span><strong>AI & Emerging Tech - Edunet + IBM SkillsBuild</strong></li>
+            <li><span>Projects Delivered</span><strong>Deployed Multiple End-to-End Systems</strong></li>
+            <li><span>Certifications</span><strong> Industry Certifications - ( IBM, Microsoft, AWS, Oracle)</strong></li>
+            <li><span>Highlights</span><strong>1st Prize - National Level HACKNOVATE 2K25</strong></li>
+          </ul>
+          <div class="stats-grid">
+            <div>
+              <p class="stat-value">8.0</p>
+              <p class="stat-label">B.Tech SGPA</p>
+            </div>
+            <div>
+              <p class="stat-value">83.54%</p>
+              <p class="stat-label">Diploma Score</p>
+            </div>
+            <div>
+              <p class="stat-value">2025</p>
+              <p class="stat-label">B.Tech Graduated</p>
+            </div>
+            <div>
+              <p class="stat-value">2026</p>
+              <p class="stat-label">Latest Tech  Certification</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Core Expertise</p>
+          <h2>Technical Skills</h2>
+          <p>Strong hands-on foundation across software development, AI engineering, and modern tooling.</p>
+        </div>
+
+        <div class="card-grid skills-grid">
+          <article class="info-card">
+            <h3>Programming</h3>
+            <p>Java, Python, C++, Android XML</p>
+          </article>
+          <article class="info-card">
+            <h3>Frontend</h3>
+            <p>HTML5, CSS3, JavaScript (ES6+), ReactJS</p>
+          </article>
+          <article class="info-card">
+            <h3>Backend & Libraries</h3>
+            <p>Java OOP, Collections, Flask (basic), NLTK, OpenCV</p>
+          </article>
+          <article class="info-card">
+            <h3>Databases</h3>
+            <p>MySQL, MongoDB</p>
+          </article>
+          <article class="info-card">
+            <h3>AI/ML</h3>
+            <p>Deep Learning, CNN, Emotion Recognition, NLP, NumPy, Pandas, Matplotlib</p>
+          </article>
+          <article class="info-card">
+            <h3>Mobile</h3>
+            <p>Android Studio, Java for Android, XML UI</p>
+          </article>
+          <article class="info-card">
+            <h3>Tools</h3>
+            <p>Git, GitHub, VS Code, IntelliJ IDEA, Google Colab</p>
+          </article>
+          <article class="info-card">
+            <h3>Platforms</h3>
+            <p>Unity (AR/VR), IBM Cloud (basic), Watson AI (basic), REST APIs, Linux (basic)</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Professional Exposure</p>
+          <h2>Internship Experience</h2>
+        </div>
+
+        <article class="timeline-card">
+          <header>
+            <h3>AI & Emerging Technology Intern</h3>
+            <p>Edunet Foundation (AICTE & IBM SkillsBuild) | Jun 2024 - Jul 2024 | Virtual</p>
+          </header>
+          <ul>
+            <li>Completed an AICTE-recognized 6-week internship focused on AI and emerging technologies.</li>
+            <li>Built and evaluated supervised ML models with preprocessing, feature engineering, and tuning.</li>
+            <li>Worked with IBM Cloud services and Watson AI APIs through guided practical labs.</li>
+            <li>Covered NumPy, Pandas, Matplotlib, and Scikit-learn for data and ML pipeline workflows.</li>
+            <li>Successfully completed all modules, assignments, and assessments with certification.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Portfolio Highlights</p>
+          <h2>Featured Projects</h2>
+        </div>
+
+        <div class="card-grid project-grid">
+          <article class="project-card">
+            <p class="project-type">Major Project</p>
+            <h3>Emotion Driven Tunes</h3>
+            <p>Driver safety and personalized music recommendation using deep learning and computer vision.</p>
+            <ul>
+              <li>Real-time multimodal CNN pipeline for drowsiness and emotion detection.</li>
+              <li>Automated safety alerts with fatigue detection for accident prevention.</li>
+              <li>Emotion-aware recommendation engine for in-cabin playlist personalization.</li>
+            </ul>
+            <div class="tags">
+              <span>Python</span>
+              <span>CNN</span>
+              <span>OpenCV</span>
+              <span>NumPy</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <p class="project-type">Mini Project</p>
+            <h3>College Website Chatbot</h3>
+            <p>NLP chatbot integrated into a college portal to automate student support queries.</p>
+            <ul>
+              <li>Intent classification and response flow with NLTK tokenization and stemming.</li>
+              <li>Handled admissions, timetable, faculty contacts, and event information queries.</li>
+              <li>Responsive conversational UI optimized for cross-device usage.</li>
+            </ul>
+            <div class="tags">
+              <span>Python</span>
+              <span>NLTK</span>
+              <span>JavaScript</span>
+              <span>HTML/CSS</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <p class="project-type">Individual Project</p>
+            <h3>Android Employee Management System</h3>
+            <p>Android app for employee registration and management with persistent backend storage.</p>
+            <ul>
+              <li>Developed complete mobile app flow in Java and Android XML.</li>
+              <li>Implemented secure CRUD operations with MySQL-backed storage.</li>
+              <li>Designed practical interfaces for efficient record management.</li>
+            </ul>
+            <div class="tags">
+              <span>Android Studio</span>
+              <span>Java</span>
+              <span>XML</span>
+              <span>MySQL</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="achievements" class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Recognition</p>
+          <h2>Achievements & Highlights</h2>
+        </div>
+
+        <div class="achievement-list">
+          <article class="achievement-item">
+            <h3>HACKNOVATE 2K25</h3>
+            <p>National Hackathon Event - <strong>1st Prize Winner</strong> (2025)</p>
+          </article>
+          <article class="achievement-item">
+            <h3>Mega Project Competition</h3>
+            <p><strong>Runner-Up</strong> (2025)</p>
+          </article>
+          <article class="achievement-item">
+            <h3>ICAESRTA 2025</h3>
+            <p>Conference Participation Documentation - <strong>Paper Published</strong> (2025)</p>
+          </article>
+          <article class="achievement-item">
+            <h3>International Conference (2024)</h3>
+            <p>Presented and achieved <strong>Runner-Up</strong> in smart and sustainable science/engineering showcase.</p>
+          </article>
+          <article class="achievement-item">
+            <h3>AICTE-Sponsored International Conference</h3>
+            <p>Advancement in Engineering & Science (Recent Trends & Applications) - <strong>Runner-Up</strong> (2024)</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Academic Foundation</p>
+          <h2>Education</h2>
+        </div>
+
+        <div class="card-grid education-grid">
+          <article class="info-card">
+            <h3>B.Tech - Computer Science & Engineering</h3>
+            <p>K.B.P College of Engineering, Satara</p>
+            <p>DBATU, Lonere | 2022 - Dec 2025</p>
+            <p><strong>SGPA: 7.50 / 10</strong></p>
+          </article>
+          <article class="info-card">
+            <h3>Diploma - Computer Engineering</h3>
+            <p>K.B.P Polytechnic, Satara</p>
+            <p>MSBTE, Mumbai | 2019 - May 2022</p>
+            <p><strong>83.54%</strong></p>
+          </article>
+          <article class="info-card">
+            <h3>Secondary School Certificate (SSC)</h3>
+            <p>Anant English Medium School, Satara</p>
+            <p>MSBSHSE | Jun 2019</p>
+            <p><strong>69.40%</strong></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications" class="section cert-section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Credentials</p>
+          <h2>Certifications</h2>
+        </div>
+      </div>
+      <div class="cert-marquee">
+        <div class="cert-track">
+          <span>AI & Emerging Technology Internship - Edunet Foundation (AICTE-IBM SkillsBuild) - 2026</span>
+          <span>Artificial Intelligence Fundamentals - IBM SkillsBuild - 2026</span>
+          <span>Introduction to Data Analytics - IBM SkillsBuild - 2025</span>
+          <span>Java Full Stack Development - Eduskills Academy (AICTE) - 2023</span>
+          <span>Python Full Stack Development - Eduskills Academy (AICTE) - 2023</span>
+          <span>Python Programming - MTSTS - 2023</span>
+          <span>AR-VR Game Development Using Unity - CDAC Pune - 2023</span>
+        </div>
+        <div class="cert-track" aria-hidden="true">
+          <span>AI & Emerging Technology Internship - Edunet Foundation (AICTE-IBM SkillsBuild) - 2026</span>
+          <span>Artificial Intelligence Fundamentals - IBM SkillsBuild - 2026</span>
+          <span>Introduction to Data Analytics - IBM SkillsBuild - 2025</span>
+          <span>Java Full Stack Development - Eduskills Academy (AICTE) - 2023</span>
+          <span>Python Full Stack Development - Eduskills Academy (AICTE) - 2023</span>
+          <span>Python Programming - MTSTS - 2023</span>
+          <span>AR-VR Game Development Using Unity - CDAC Pune - 2023</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <article class="contact-card">
+          <p class="eyebrow">Let us build together</p>
+          <h2>Available for Software, Full Stack, Android, and AI/ML opportunities.</h2>
+          <p>I am ready to contribute to product teams building robust and scalable systems with measurable impact.</p>
+          <div class="hero-actions">
+            <a href="assets/Shreyas_Taralekar_Resume.pdf" download class="btn btn-primary">Download Resume PDF</a>
+          </div>
+        </article>
+
+        <div class="contact-grid">
+          <!-- Email Contact -->
+          <a href="mailto:shreyastaralekar28@gmail.com" class="contact-item contact-email" title="Send Email">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <div class="contact-info">
+              <p class="contact-label">Email</p>
+              <p class="contact-value">shreyastaralekar28@gmail.com</p>
+            </div>
+          </a>
+
+          <!-- Phone Contact -->
+          <a href="tel:+919359996215" class="contact-item contact-phone" title="Call Phone">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </div>
+            <div class="contact-info">
+              <p class="contact-label">Phone</p>
+              <p class="contact-value">+91 9359996215</p>
+            </div>
+          </a>
+
+          <!-- GitHub Contact -->
+          <a href="https://github.com/shreyastaralekar" target="_blank" rel="noreferrer" class="contact-item contact-github" title="Visit GitHub">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+              </svg>
+            </div>
+            <div class="contact-info">
+              <p class="contact-label">GitHub</p>
+              <p class="contact-value">shreyastaralekar</p>
+            </div>
+          </a>
+
+          <!-- LinkedIn Contact -->
+          <a href="https://linkedin.com/in/shreyas-taralekar" target="_blank" rel="noreferrer" class="contact-item contact-linkedin" title="Visit LinkedIn">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"></path>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </div>
+            <div class="contact-info">
+              <p class="contact-label">LinkedIn</p>
+              <p class="contact-value">shreyas-taralekar</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-shell">
+            <p>&copy; <span id="year"></span> <div style="text-align: center;">
+  <p>Made by Shreyas Taralekar</p>
+</div>
+      
+    </div>
+  </footer>
+
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">&uarr;</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
+D
