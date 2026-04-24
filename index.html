@@ -1,15 +1,22 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio of Shreyas Taralekar - Software Developer, Full Stack Developer, Android Developer, and AI/ML Engineer.">
+  <meta name="description"
+    content="Portfolio of Shreyas Taralekar - Software Developer, Full Stack Developer, Android Developer, and AI/ML Engineer.">
   <title>Shreyas Taralekar | Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <div class="bg-orb orb-1" aria-hidden="true"></div>
   <div class="bg-orb orb-2" aria-hidden="true"></div>
@@ -19,12 +26,32 @@
   <header class="site-header">
     <div class="container nav-shell">
       <a href="#home" class="brand" aria-label="Go to top">
-        <span class="brand-mark">ST</span>
-        <span class="brand-text"><p class="stat-value"><strong>WELCOME !</strong>
-              <p class="stat-label">To Shreyas's Portfolio..</p></span>
+        <svg class="animated-brand-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#2563eb" />
+              <stop offset="100%" stop-color="#ff6a00" />
+            </linearGradient>
+            <linearGradient id="logoGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#ff6a00" />
+              <stop offset="100%" stop-color="#2563eb" />
+            </linearGradient>
+          </defs>
+          <circle cx="50" cy="50" r="40" fill="none" stroke="url(#logoGrad)" stroke-width="8" stroke-dasharray="60 20"
+            class="logo-circle" />
+          <circle cx="50" cy="50" r="28" fill="none" stroke="url(#logoGrad2)" stroke-width="6" stroke-dasharray="40 15"
+            class="logo-circle-inner" />
+          <text x="50" y="58" font-family="Space Grotesk, sans-serif" font-weight="bold" font-size="28"
+            fill="url(#logoGrad)" text-anchor="middle" class="logo-text">ST</text>
+        </svg>
+        <span class="brand-text">
+          <p class="stat-value" style="font-size: 1rem;"><strong>WELCOME !</strong></p>
+          <p class="stat-label" style="font-size: 0.75rem;">To Shreyas's Portfolio..</p>
+        </span>
       </a>
 
-      <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+      <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="site-nav"
+        aria-label="Toggle navigation">
         <span class="menu-lines" aria-hidden="true">
           <span></span>
           <span></span>
@@ -53,7 +80,8 @@
           <h1>Building reliable software for web, mobile, and AI experiences.</h1>
           <p class="intro">
             I am <strong>Shreyas Taralekar</strong>, a motivated Computer Science graduate focused on
-            <strong>Full Stack Development</strong>, <strong>Android Development</strong>, and <strong>AI/ML Engineering</strong>.
+            <strong>Full Stack Development</strong>, <strong>Android Development</strong>, and <strong>AI/ML
+              Engineering</strong>.
             I build practical products that solve real problems at scale.
           </p>
           <p class="role-line">
@@ -63,11 +91,12 @@
 
           <div class="hero-actions">
             <a href="#projects" class="btn btn-primary">View Projects</a>
-            <a href="assets/Shreyas_Taralekar_Resume.pdf" download class="btn btn-ghost">Download Resume</a>
+            <a href="assets/Resume_Shreyas_Taralekar_9359996215.pdf" download class="btn btn-ghost">Download Resume</a>
           </div>
 
           <div class="social-links hero-social">
-            <a id="hero-mail-link" href="mailto:shreyastaralekar28@gmail.com" title="Email Shreyas" class="social-link email-link">
+            <a id="hero-mail-link" href="mailto:shreyastaralekar28@gmail.com" title="Email Shreyas"
+              class="social-link email-link">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                 <polyline points="22,6 12,13 2,6"></polyline>
@@ -76,20 +105,27 @@
             </a>
             <a href="tel:+919359996215" title="Call Shreyas" class="social-link phone-link">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
               </svg>
               <span>Phone</span>
             </a>
-            <a href="https://linkedin.com/in/shreyas-taralekar" target="_blank" rel="noreferrer" title="Visit LinkedIn" class="social-link linkedin-link">
+            <a href="https://linkedin.com/in/shreyas-taralekar" target="_blank" rel="noreferrer" title="Visit LinkedIn"
+              class="social-link linkedin-link">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"></path>
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z">
+                </path>
                 <circle cx="4" cy="4" r="2"></circle>
               </svg>
               <span>LinkedIn</span>
             </a>
-            <a href="https://github.com/shreyastaralekar" target="_blank" rel="noreferrer" title="Visit GitHub" class="social-link github-link">
+            <a href="https://github.com/shreyastaralekar" target="_blank" rel="noreferrer" title="Visit GitHub"
+              class="social-link github-link">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                </path>
               </svg>
               <span>GitHub</span>
             </a>
@@ -101,7 +137,8 @@
           <ul>
             <li><span>Internship</span><strong>AI & Emerging Tech - Edunet + IBM SkillsBuild</strong></li>
             <li><span>Projects Delivered</span><strong>Deployed Multiple End-to-End Systems</strong></li>
-            <li><span>Certifications</span><strong> Industry Certifications - ( IBM, Microsoft, AWS, Oracle)</strong></li>
+            <li><span>Certifications</span><strong> Industry Certifications - ( IBM, Microsoft, AWS, Oracle)</strong>
+            </li>
             <li><span>Highlights</span><strong>1st Prize - National Level HACKNOVATE 2K25</strong></li>
           </ul>
           <div class="stats-grid">
@@ -119,7 +156,7 @@
             </div>
             <div>
               <p class="stat-value">2026</p>
-              <p class="stat-label">Latest Tech  Certification</p>
+              <p class="stat-label">Latest Tech Certification</p>
             </div>
           </div>
         </aside>
@@ -132,6 +169,10 @@
           <p class="eyebrow">Core Expertise</p>
           <h2>Technical Skills</h2>
           <p>Strong hands-on foundation across software development, AI engineering, and modern tooling.</p>
+          <div class="animated-progress-line" data-wave>
+            <div class="line-glow-runner"></div>
+            <div class="line-particles"></div>
+          </div>
         </div>
 
         <div class="card-grid skills-grid">
@@ -176,6 +217,10 @@
         <div class="section-head">
           <p class="eyebrow">Professional Exposure</p>
           <h2>Internship Experience</h2>
+          <div class="animated-progress-line" data-wave>
+            <div class="line-glow-runner"></div>
+            <div class="line-particles"></div>
+          </div>
         </div>
 
         <article class="timeline-card">
@@ -199,6 +244,10 @@
         <div class="section-head">
           <p class="eyebrow">Portfolio Highlights</p>
           <h2>Featured Projects</h2>
+          <div class="animated-progress-line" data-wave>
+            <div class="line-glow-runner"></div>
+            <div class="line-particles"></div>
+          </div>
         </div>
 
         <div class="card-grid project-grid">
@@ -261,6 +310,10 @@
         <div class="section-head">
           <p class="eyebrow">Recognition</p>
           <h2>Achievements & Highlights</h2>
+          <div class="animated-progress-line" data-wave>
+            <div class="line-glow-runner"></div>
+            <div class="line-particles"></div>
+          </div>
         </div>
 
         <div class="achievement-list">
@@ -278,11 +331,13 @@
           </article>
           <article class="achievement-item">
             <h3>International Conference (2024)</h3>
-            <p>Presented and achieved <strong>Runner-Up</strong> in smart and sustainable science/engineering showcase.</p>
+            <p>Presented and achieved <strong>Runner-Up</strong> in smart and sustainable science/engineering showcase.
+            </p>
           </article>
           <article class="achievement-item">
             <h3>AICTE-Sponsored International Conference</h3>
-            <p>Advancement in Engineering & Science (Recent Trends & Applications) - <strong>Runner-Up</strong> (2024)</p>
+            <p>Advancement in Engineering & Science (Recent Trends & Applications) - <strong>Runner-Up</strong> (2024)
+            </p>
           </article>
         </div>
       </div>
@@ -293,6 +348,10 @@
         <div class="section-head">
           <p class="eyebrow">Academic Foundation</p>
           <h2>Education</h2>
+          <div class="animated-progress-line" data-wave>
+            <div class="line-glow-runner"></div>
+            <div class="line-particles"></div>
+          </div>
         </div>
 
         <div class="card-grid education-grid">
@@ -323,6 +382,10 @@
         <div class="section-head">
           <p class="eyebrow">Credentials</p>
           <h2>Certifications</h2>
+          <div class="animated-progress-line" data-wave>
+            <div class="line-glow-runner"></div>
+            <div class="line-particles"></div>
+          </div>
         </div>
       </div>
       <div class="cert-marquee">
@@ -354,7 +417,8 @@
           <h2>Available for Software, Full Stack, Android, and AI/ML opportunities.</h2>
           <p>I am ready to contribute to product teams building robust and scalable systems with measurable impact.</p>
           <div class="hero-actions">
-            <a href="assets/Shreyas_Taralekar_Resume.pdf" download class="btn btn-primary">Download Resume PDF</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeOLah0YZY6kLC9dSXlakxl1iIJZK5_9st4xZtRcickCFwz7g/viewform?usp=publish-editor"
+              download class="btn btn-primary">Connect Me</a>
           </div>
         </article>
 
@@ -377,7 +441,9 @@
           <a href="tel:+919359996215" class="contact-item contact-phone" title="Call Phone">
             <div class="contact-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
               </svg>
             </div>
             <div class="contact-info">
@@ -387,10 +453,13 @@
           </a>
 
           <!-- GitHub Contact -->
-          <a href="https://github.com/shreyastaralekar" target="_blank" rel="noreferrer" class="contact-item contact-github" title="Visit GitHub">
+          <a href="https://github.com/shreyastaralekar" target="_blank" rel="noreferrer"
+            class="contact-item contact-github" title="Visit GitHub">
             <div class="contact-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                </path>
               </svg>
             </div>
             <div class="contact-info">
@@ -400,10 +469,12 @@
           </a>
 
           <!-- LinkedIn Contact -->
-          <a href="https://linkedin.com/in/shreyas-taralekar" target="_blank" rel="noreferrer" class="contact-item contact-linkedin" title="Visit LinkedIn">
+          <a href="https://linkedin.com/in/shreyas-taralekar" target="_blank" rel="noreferrer"
+            class="contact-item contact-linkedin" title="Visit LinkedIn">
             <div class="contact-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"></path>
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z">
+                </path>
                 <circle cx="4" cy="4" r="2"></circle>
               </svg>
             </div>
@@ -419,16 +490,17 @@
 
   <footer class="site-footer">
     <div class="container footer-shell">
-            <p>&copy; <span id="year"></span> <div style="text-align: center;">
-  <p>Made by Shreyas Taralekar</p>
-</div>
-      
+      <p>&copy; <span id="year"></span>
+      <div style="text-align: center;">
+        <p>Made by Shreyas Taralekar</p>
+      </div>
+
     </div>
   </footer>
 
-    <button id="back-to-top" class="back-to-top" aria-label="Back to top">&uarr;</button>
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">&uarr;</button>
 
   <script src="script.js"></script>
 </body>
+
 </html>
-D
