@@ -1,0 +1,102 @@
+/* enhance.css - doodles, tape banner, M.Tech card. Loads after styles.css */
+:root{--hand:"Caveat","Segoe Print",cursive}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes fade{to{opacity:1}}
+@keyframes tape{to{transform:translateX(-50%)}}
+.section-head{margin-bottom:2.1rem}
+.hero{overflow-x:clip}
+.hero .container{position:relative;z-index:1}
+.doodles{position:absolute;inset:0;pointer-events:none;z-index:0}
+.doodles svg{position:absolute;overflow:visible;fill:none;stroke-linecap:round;stroke-linejoin:round;transition:transform .25s ease-out}
+.doodles path,.doodles circle,.cap path,.card-note path{stroke-dasharray:1;stroke-dashoffset:1}
+.doodles path,.doodles circle{animation:draw 1.3s .4s cubic-bezier(.6,.1,.2,1) forwards}
+.d-star{left:3%;top:16%;width:54px;stroke:var(--accent);stroke-width:3}
+.d-squig{left:6%;bottom:30%;width:150px;stroke:var(--primary);stroke-width:3}
+.d-ring{right:2%;bottom:24%;width:90px;stroke:var(--accent);stroke-width:2.5}
+.hero-card{position:relative}
+.card-note{position:absolute;top:.7rem;right:1.1rem;display:flex;gap:.2rem;font:600 1.35rem/1 var(--hand);color:var(--accent);transform:rotate(-5deg);opacity:0;animation:fade .6s 1.5s forwards}
+.card-note svg{width:34px;height:24px;fill:none;stroke:var(--accent);stroke-width:3;stroke-linecap:round}
+.card-note path{animation:draw .9s 1.7s forwards}
+.tape{position:relative;z-index:2;width:110%;margin:clamp(2rem,5vw,3.5rem) 0 0 -5%;transform:rotate(-1.2deg);overflow:hidden;color:#fff;background:linear-gradient(90deg,var(--primary),var(--accent));border-block:2px dashed rgba(255,255,255,.55);box-shadow:0 10px 24px rgba(37,99,235,.25)}
+.tape-track{display:flex;width:max-content;animation:tape 36s linear infinite}
+.tape:hover .tape-track{animation-play-state:paused}
+.tape span{padding:.7rem 0 .7rem 2rem;font:600 1rem "Space Grotesk",sans-serif;white-space:nowrap}
+.tape span::after{content:"\2726";margin-left:2rem;opacity:.7}
+.edu-now{grid-column:1/-1;position:relative;display:grid;grid-template-columns:auto 1fr;column-gap:1.3rem;align-items:center;background:linear-gradient(135deg,#eef4ff,#fff3e6);border:2px solid var(--primary)}
+.edu-now>:not(svg){grid-column:2}
+.edu-now::before{content:"Now pursuing";position:absolute;top:-.85rem;left:1.3rem;padding:.25rem .85rem;border-radius:999px;background:var(--accent);color:#fff;font:700 .8rem "Space Grotesk",sans-serif;transform:rotate(-3deg)}
+.cap{grid-column:1;grid-row:1/5;width:72px;fill:none;stroke:var(--primary);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.wave-visible .cap path{animation:draw 1.3s .35s ease forwards}
+@media (max-width:840px){.d-squig,.d-ring{display:none}.card-note{display:none}}
+@media (max-width:620px){.edu-now{grid-template-columns:1fr}.edu-now>*,.cap{grid-column:1;grid-row:auto}.cap{width:56px}.tape span{font-size:.9rem}}
+@media (prefers-reduced-motion:reduce){.doodles path,.doodles circle,.cap path,.card-note path{animation:none;stroke-dashoffset:0}.card-note{animation:none;opacity:1}.tape{overflow-x:auto}.tape-track{animation:none}}
+
+/* v2: header logo, section notes, dev logos, credential wall */
+@property --a{syntax:"<angle>";initial-value:0deg;inherits:false}
+@keyframes blink{50%{opacity:0}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes bob{50%{transform:translateY(-8px)}}
+@keyframes orbit{to{--a:360deg}}
+@keyframes deal{from{opacity:0;transform:translateY(60px) rotate(calc(var(--r,0)*1deg)) scale(.85)}to{opacity:1;transform:none}}
+.brand .dev-logo{width:52px;height:52px;flex:none;overflow:visible}
+.dl-hex{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.2s .2s forwards}
+.dl-cursor{animation:blink 1s steps(2) infinite}
+.dl-orbit{transform-origin:32px 32px;animation:spin 7s linear infinite}
+.section-head{position:relative}
+.note{position:absolute;right:0;top:0;display:flex;gap:.2rem;font:600 1.4rem/1 var(--hand);color:var(--accent);transform:rotate(-4deg);opacity:0}
+.note svg{width:34px;height:24px;fill:none;stroke:var(--accent);stroke-width:3;stroke-linecap:round}
+.note path{stroke-dasharray:1;stroke-dashoffset:1}
+.section-visible .note{animation:fade .5s .5s forwards}
+.section-visible .note path{animation:draw .8s .8s forwards}
+.logos{display:flex;flex-wrap:wrap;gap:.6rem;margin:.1rem 0 .7rem}
+.logos img{width:28px;height:28px;animation:bob 3.2s ease-in-out infinite;animation-delay:calc(var(--k)*.3s)}
+.sym{position:absolute;font:600 1.5rem/1 var(--hand);opacity:.5;animation:bob 5s ease-in-out infinite}
+.s1{right:34%;top:9%;color:var(--primary)}.s2{left:46%;bottom:14%;color:var(--accent);animation-delay:-2s}
+.s3{left:2%;top:46%;color:var(--primary);animation-delay:-1s}.s4{right:3%;top:38%;color:var(--accent);animation-delay:-3s}
+.timeline-card+.timeline-card{margin-top:1.4rem}
+.tl-now{position:relative;border:2px solid var(--primary);background:linear-gradient(135deg,#eef4ff,#fff3e6)}
+.tl-now::before{content:"Next up";position:absolute;top:-.85rem;right:1.3rem;padding:.25rem .85rem;border-radius:999px;background:var(--accent);color:#fff;font:700 .8rem "Space Grotesk",sans-serif;transform:rotate(3deg)}
+.cert-wall{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.1rem;perspective:1100px}
+.cert-card{position:relative;padding:1.2rem;border-radius:var(--radius-md);background:var(--surface-strong);isolation:isolate;overflow:hidden;transition:transform .4s,box-shadow .4s}
+.cert-card::before{content:"";position:absolute;inset:0;z-index:-1;padding:2px;border-radius:inherit;background:conic-gradient(from var(--a),var(--c),transparent 30%,transparent 70%,var(--c));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);mask-composite:exclude;opacity:.35;transition:opacity .4s;animation:orbit 6s linear infinite}
+.cert-card::after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(260px circle at var(--mx,50%) var(--my,0%),color-mix(in srgb,var(--c) 14%,transparent),transparent 70%)}
+.cert-card.is-lit,.cert-card:hover{transform:translateY(-6px);box-shadow:0 18px 36px color-mix(in srgb,var(--c) 28%,transparent)}
+.cert-card.is-lit::before,.cert-card:hover::before{opacity:1}
+.cert-card:nth-child(odd){--r:-8}.cert-card:nth-child(even){--r:7}
+.cert-badge{display:grid;place-items:center;width:46px;height:46px;margin-bottom:.8rem;border-radius:14px;background:var(--c);color:#fff;font:700 .85rem "Space Grotesk",sans-serif;transform:rotate(-6deg)}
+.cert-year{position:absolute;top:1rem;right:1rem;font:700 .85rem "Space Grotesk",sans-serif;color:var(--c)}
+.cert-card h3{margin:0 0 .25rem;font:600 1.02rem/1.3 "Space Grotesk",sans-serif}
+.cert-card p{margin:0;color:var(--muted);font-size:.9rem}
+.section-observe:not(.section-visible) .cert-card{opacity:0}
+.section-visible .cert-card{animation:deal .85s calc(var(--i)*110ms) cubic-bezier(.2,.9,.25,1.15) backwards}
+@media (max-width:840px){.s3,.s4{display:none}}
+@media (max-width:620px){.note{display:none}}
+@media (prefers-reduced-motion:reduce){.logos img,.sym,.dl-orbit,.dl-cursor,.cert-card::before,.section-visible .cert-card{animation:none}.dl-hex,.note path,.section-visible .note path{animation:none;stroke-dashoffset:0}.note,.section-visible .note{animation:none;opacity:1}}
+
+/* certificate viewer */
+a.cert-card{color:inherit;text-decoration:none;cursor:zoom-in}
+.cert-view{display:inline-block;margin-top:.8rem;font:600 .85rem "Space Grotesk",sans-serif;color:var(--c);opacity:0;transform:translateY(4px);transition:opacity .3s,transform .3s}
+.cert-card:hover .cert-view,.cert-card:focus-visible .cert-view,.cert-card.is-lit .cert-view{opacity:1;transform:none}
+.cert-card:focus-visible{outline:3px solid var(--c);outline-offset:3px}
+.cert-modal{position:fixed;inset:0;z-index:100;display:grid;place-items:center;padding:1rem;background:rgba(15,18,35,.78);backdrop-filter:blur(6px)}
+.cert-modal[hidden]{display:none}
+.cert-box{position:relative;width:min(1000px,100%);max-height:94vh;display:flex;flex-direction:column;gap:.8rem;padding:1rem;border-radius:18px;background:#fff;animation:pop .35s cubic-bezier(.2,.9,.25,1.15)}
+.cert-stage{flex:1;min-height:0;display:grid;place-items:center;overflow:auto;border-radius:12px;background:#f3f1ec}
+.cert-stage img{max-width:100%;max-height:72vh;object-fit:contain}
+.cert-stage iframe{width:100%;height:72vh;border:0}
+.cert-meta{display:flex;flex-wrap:wrap;gap:.6rem 1.2rem;align-items:center;justify-content:space-between}
+.cert-meta p{margin:0;font-weight:600}
+.cert-open{font-weight:600;color:var(--primary)}
+.cert-close,.cert-nav{position:absolute;display:grid;place-items:center;width:42px;height:42px;border:0;border-radius:50%;background:var(--accent);color:#fff;font-size:1.4rem;cursor:pointer}
+.cert-close{top:-14px;right:-14px}
+.cert-nav{top:44%}.cert-prev{left:-14px}.cert-next{right:-14px}
+body.cert-lock{overflow:hidden}
+@keyframes pop{from{opacity:0;transform:scale(.9) translateY(20px)}}
+@media (max-width:620px){.cert-close{top:6px;right:6px}.cert-prev{left:6px}.cert-next{right:6px}}
+@media (prefers-reduced-motion:reduce){.cert-box{animation:none}}
+
+/* certificate groups */
+.cert-group{display:flex;align-items:baseline;gap:.7rem;margin:2.4rem 0 1rem;font:700 1.3rem "Space Grotesk",sans-serif}
+.cert-group:first-child{margin-top:0}
+.cert-group small{font:500 .9rem "Space Grotesk",sans-serif;color:var(--muted)}
+.cert-group::after{content:"";flex:1;height:2px;background:repeating-linear-gradient(90deg,var(--accent) 0 10px,transparent 10px 18px);opacity:.45}
