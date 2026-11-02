@@ -75,6 +75,7 @@
 
 /* certificate viewer */
 a.cert-card{color:inherit;text-decoration:none;cursor:zoom-in}
+a.cert-card.cert-external{cursor:pointer}
 .cert-view{display:inline-block;margin-top:.8rem;font:600 .85rem "Space Grotesk",sans-serif;color:var(--c);opacity:0;transform:translateY(4px);transition:opacity .3s,transform .3s}
 .cert-card:hover .cert-view,.cert-card:focus-visible .cert-view,.cert-card.is-lit .cert-view{opacity:1;transform:none}
 .cert-card:focus-visible{outline:3px solid var(--c);outline-offset:3px}

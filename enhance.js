@@ -41,7 +41,7 @@
 /* certificate viewer: click a card to open its image or PDF */
 (() => {
   const modal = document.getElementById("certModal");
-  const cards = [...document.querySelectorAll(".cert-card[href]")];
+  const cards = [...document.querySelectorAll(".cert-card[href]:not(.cert-external)")];
   if (!modal || !cards.length) return;
   const stage = modal.querySelector(".cert-stage");
   const cap = modal.querySelector("#certCap");
