@@ -41,7 +41,7 @@
 /* certificate viewer: click a card to open its image or PDF */
 (() => {
   const modal = document.getElementById("certModal");
-  const cards = [...document.querySelectorAll(".cert-card[href]:not(.cert-external)")];
+  const cards = [...document.querySelectorAll(".cert-card[href]")];
   if (!modal || !cards.length) return;
   const stage = modal.querySelector(".cert-stage");
   const cap = modal.querySelector("#certCap");
@@ -51,7 +51,10 @@
     idx = (i + cards.length) % cards.length;
     const c = cards[idx], src = c.getAttribute("href");
     cap.textContent = `${c.dataset.title} - ${c.dataset.org}`;
-    openLink.href = src;
+    openLink.href = c.dataset.verifyUrl || src;
+    openLink.innerHTML = c.dataset.verifyUrl ? "Verify on LinkedIn &#8599;" : "Open full size &#8599;";
+    openLink.target = "_blank";
+    openLink.rel = "noopener";
     stage.replaceChildren();
     if (/\.pdf($|\?)/i.test(src)) {
       const f = document.createElement("iframe");
