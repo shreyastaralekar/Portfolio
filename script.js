@@ -24,6 +24,39 @@ if (roleEl && !prefersReducedMotion) {
   }, 2600);
 }
 
+/* ── 1.5 PROJECT FILTERS ── */
+const filterButtons = Array.from(document.querySelectorAll(".filter-btn"));
+const projectCards = Array.from(document.querySelectorAll(".project-card[data-category]"));
+const filterStatus = document.querySelector("#project-filter-status");
+
+if (filterButtons.length && projectCards.length) {
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const filter = button.dataset.filter;
+      const label = button.textContent.trim();
+      let visibleCount = 0;
+
+      filterButtons.forEach((item) => {
+        const active = item === button;
+        item.classList.toggle("is-active", active);
+        item.setAttribute("aria-pressed", String(active));
+      });
+
+      projectCards.forEach((card) => {
+        const visible = filter === "all" || card.dataset.category === filter;
+        card.hidden = !visible;
+        if (visible) visibleCount += 1;
+      });
+
+      if (filterStatus) {
+        filterStatus.textContent = filter === "all"
+          ? "Showing all projects"
+          : `Showing ${visibleCount} ${label} project${visibleCount === 1 ? "" : "s"}`;
+      }
+    });
+  });
+}
+
 /* ── 2. STAGGERED WAVE REVEAL ── */
 function getWaveChildren(section) {
   const waves = [];

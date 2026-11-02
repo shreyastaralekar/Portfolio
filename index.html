@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -52,7 +52,6 @@
       <nav id="site-nav" class="site-nav">
         <a href="#home">Home</a>
         <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#achievements">Achievements</a>
         <a href="#education">Education</a>
@@ -135,9 +134,8 @@
           <h2>Profile Snapshot</h2>
           <ul>
             <li><span>Currently</span><strong>M.Tech AI &amp; ML - Symbiosis Institute of Technology, Pune (2026 - 2028)</strong></li>
-            <li><span>Internship</span><strong>AI & Emerging Tech - Edunet + IBM SkillsBuild</strong></li>
             <li><span>Projects Delivered</span><strong>Deployed Multiple End-to-End Systems</strong></li>
-            <li><span>Certifications</span><strong> Industry Certifications - ( IBM, Microsoft, Oracle, Google Cloud)</strong>
+            <li><span>Professional Certification</span><strong>OCI 2025 Certified Generative AI Professional - Oracle</strong>
             </li>
             <li><span>Highlights</span><strong>Winner - HACKNOVATE 2K25</strong></li>
           </ul>
@@ -161,7 +159,7 @@
           </div>
         </aside>
       </div>
-      <div class="tape" role="note"><div class="tape-track"><span>Now pursuing M.Tech in AI &amp; ML - Symbiosis Institute of Technology, Pune (2026 - 2028)</span><span>Next up: Infosys Springboard Virtual Internship 7.0 (Batch 5) - AI/ML</span><span>Winner - HACKNOVATE 2K25</span><span>Paper presented - ICAESRTA 2025</span><span>Open to Software, Full Stack, Android and AI/ML roles</span><span>Now pursuing M.Tech in AI &amp; ML - Symbiosis Institute of Technology, Pune (2026 - 2028)</span><span>Next up: Infosys Springboard Virtual Internship 7.0 (Batch 5) - AI/ML</span><span>Winner - HACKNOVATE 2K25</span><span>Paper presented - ICAESRTA 2025</span><span>Open to Software, Full Stack, Android and AI/ML roles</span></div></div>
+      <div class="tape" role="note"><div class="tape-track"><span>Now pursuing M.Tech in AI &amp; ML - Symbiosis Institute of Technology, Pune (2026 - 2028)</span><span>Winner - HACKNOVATE 2K25</span><span>Paper presented - ICAESRTA 2025</span><span>Open to Software, Full Stack, Android and AI/ML roles</span><span>Now pursuing M.Tech in AI &amp; ML - Symbiosis Institute of Technology, Pune (2026 - 2028)</span><span>Winner - HACKNOVATE 2K25</span><span>Paper presented - ICAESRTA 2025</span><span>Open to Software, Full Stack, Android and AI/ML roles</span></div></div>
     </section>
 
     <section id="skills" class="section">
@@ -214,49 +212,19 @@
       </div>
     </section>
 
-    <section id="experience" class="section">
-      <div class="container">
-        <div class="section-head">
-          <span class="note" aria-hidden="true">learning by doing<svg viewBox="0 0 60 40"><path pathLength="1" d="M6 4 C30 0 52 14 50 34 M42 27 L50 35 L57 25"/></svg></span>
-          <p class="eyebrow">Professional Exposure</p>
-          <h2>Internship Experience</h2>
-          <div class="animated-progress-line" data-wave>
-            <div class="line-glow-runner"></div>
-            <div class="line-particles"></div>
-          </div>
-        </div>
-
-        <article class="timeline-card tl-now">
-          <header>
-            <h3>Infosys Springboard Virtual Internship 7.0 (Batch 5)</h3>
-            <p>Infosys Springboard | AI/ML Track | 2026 | Virtual</p>
-          </header>
-          <ul>
-            <li>Selected for Batch 5 of the Infosys Springboard Virtual Internship 7.0 (AI/ML track).</li>
-          </ul>
-        </article>
-        <article class="timeline-card">
-          <header>
-            <h3>AI & Emerging Technology Intern</h3>
-            <p>Edunet Foundation (AICTE & IBM SkillsBuild) | Jun 2024 - Jul 2024 | Virtual</p>
-          </header>
-          <ul>
-            <li>Completed an AICTE-recognized 6-week internship focused on AI and emerging technologies.</li>
-            <li>Built and evaluated supervised ML models with preprocessing, feature engineering, and tuning.</li>
-            <li>Worked with IBM Cloud services and Watson AI APIs through guided practical labs.</li>
-            <li>Covered NumPy, Pandas, Matplotlib, and Scikit-learn for data and ML pipeline workflows.</li>
-            <li>Successfully completed all modules, assignments, and assessments with certification.</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
     <section id="projects" class="section">
       <div class="container">
         <div class="section-head">
           <span class="note" aria-hidden="true">built and shipped<svg viewBox="0 0 60 40"><path pathLength="1" d="M6 4 C30 0 52 14 50 34 M42 27 L50 35 L57 25"/></svg></span>
           <p class="eyebrow">Portfolio Highlights</p>
           <h2>Featured Projects</h2>
+          <div class="project-filters" role="group" aria-label="Filter projects">
+            <button class="filter-btn is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+            <button class="filter-btn" type="button" data-filter="ai" aria-pressed="false">AI/ML</button>
+            <button class="filter-btn" type="button" data-filter="web" aria-pressed="false">Web</button>
+            <button class="filter-btn" type="button" data-filter="android" aria-pressed="false">Android</button>
+          </div>
+          <p class="filter-status" id="project-filter-status" aria-live="polite">Showing all projects</p>
           <div class="animated-progress-line" data-wave>
             <div class="line-glow-runner"></div>
             <div class="line-particles"></div>
@@ -264,7 +232,7 @@
         </div>
 
         <div class="card-grid project-grid">
-          <article class="project-card">
+          <article class="project-card" data-category="ai">
             <p class="project-type">Major Project</p>
             <h3>Emotion Driven Tunes</h3>
             <p>Driver safety and personalized music recommendation using deep learning and computer vision.</p>
@@ -281,7 +249,7 @@
             </div>
           </article>
 
-          <article class="project-card">
+          <article class="project-card" data-category="web">
             <p class="project-type">Mini Project</p>
             <h3>College Website Chatbot</h3>
             <p>NLP chatbot integrated into a college portal to automate student support queries.</p>
@@ -298,7 +266,7 @@
             </div>
           </article>
 
-          <article class="project-card">
+          <article class="project-card" data-category="android">
             <p class="project-type">Individual Project</p>
             <h3>Android Employee Management System</h3>
             <p>Android app for employee registration and management with persistent backend storage.</p>
@@ -405,8 +373,18 @@
           </div>
         </div>
       </div>
-      <div class="container"><div class="cert-groups"><h3 class="cert-group">AI &amp; Cloud Certifications <small>7 certificates</small></h3><div class="cert-wall"><a class="cert-card" href="assets/certificates/ai-cloud/oracle-oci-generative-ai-professional-2025.jpg" target="_blank" rel="noopener" data-title="OCI 2025 Certified Generative AI Professional" data-org="Oracle | 26 Aug 2025" aria-label="View certificate: OCI 2025 Certified Generative AI Professional" style="--i:0;--c:#c74634"><span class="cert-badge">OCI</span><span class="cert-year">2025</span><h3>OCI 2025 Certified Generative AI Professional</h3><p>Oracle</p><span class="cert-view">View certificate &#8599;</span></a><a class="cert-card" href="assets/certificates/ai-cloud/oracle-oci-ai-foundations-associate-2025.jpg" target="_blank" rel="noopener" data-title="OCI 2025 Certified AI Foundations Associate" data-org="Oracle | 20 Aug 2025 (valid until 20 Aug 2027)" aria-label="View certificate: OCI 2025 Certified AI Foundations Associate" style="--i:1;--c:#c74634"><span class="cert-badge">OCI</span><span class="cert-year">2025</span><h3>OCI 2025 Certified AI Foundations Associate</h3><p>Oracle</p><span class="cert-view">View certificate &#8599;</span></a><a class="cert-card" href="assets/certificates/ai-cloud/ibm-skillsbuild-ai-fundamentals-2026.jpg" target="_blank" rel="noopener" data-title="Artificial Intelligence Fundamentals" data-org="IBM SkillsBuild | 3 Apr 2026" aria-label="View certificate: Artificial Intelligence Fundamentals" style="--i:2;--c:#1f70c1"><span class="cert-badge">IBM</span><span class="cert-year">2026</span><h3>Artificial Intelligence Fundamentals</h3><p>IBM SkillsBuild</p><span class="cert-view">View certificate &#8599;</span></a><a class="cert-card" href="assets/certificates/ai-cloud/elements-of-ai-2026.jpg" target="_blank" rel="noopener" data-title="Elements of AI" data-org="University of Helsinki &amp; MinnaLearn | 22 Mar 2026" aria-label="View certificate: Elements of AI" style="--i:3;--c:#5b4bc4"><span class="cert-badge">UH</span><span class="cert-year">2026</span><h3>Elements of AI</h3><p>University of Helsinki &amp; MinnaLearn</p><span class="cert-view">View certificate &#8599;</span></a><a class="cert-card" href="assets/certificates/ai-cloud/google-cloud-intro-generative-ai-2025.jpg" target="_blank" rel="noopener" data-title="Introduction to Generative AI" data-org="Google Cloud (via Simplilearn SkillUP) | 17 Sep 2025" aria-label="View certificate: Introduction to Generative AI" style="--i:4;--c:#4285f4"><span class="cert-badge">GC</span><span class="cert-year">2025</span><h3>Introduction to Generative AI</h3><p>Google Cloud (via Simplilearn SkillUP)</p><span class="cert-view">View certificate &#8599;</span></a><a class="cert-card" href="assets/certificates/ai-cloud/microsoft-learn-fundamental-ai-concepts-2025.jpg" target="_blank" rel="noopener" data-title="Fundamental AI Concepts" data-org="Microsoft Learn | 17 Apr 2025" aria-label="View certificate: Fundamental AI Concepts" style="--i:5;--c:#0078d4"><span class="cert-badge">MS</span><span class="cert-year">2025</span><h3>Fundamental AI Concepts</h3><p>Microsoft Learn</p><span class="cert-view">View certificate &#8599;</span></a><a class="cert-card" href="assets/certificates/ai-cloud/infosys-springboard-intro-to-ai-2024.jpg" target="_blank" rel="noopener" data-title="Introduction to Artificial Intelligence" data-org="Infosys Springboard | 20 Aug 2024" aria-label="View certificate: Introduction to Artificial Intelligence" style="--i:6;--c:#007cc3"><span class="cert-badge">Inf</span><span class="cert-year">2024</span><h3>Introduction to Artificial Intelligence</h3><p>Infosys Springboard</p><span class="cert-view">View certificate &#8599;</span></a></div><h3 class="cert-group">Internships &amp; Industrial Training <small>6 certificates</small></h3><div class="cert-wall"><a class="cert-card" href="assets/certificates/internships/ybi-foundation-aiml-data-science-internship-2025.jpg" target="_blank" rel="noopener" data-title="AIML with Data Science Internship (3 months)" data-org="YBI Foundation | Completed 14 Jun 2025" aria-label="View certificate: AIML with Data Science Internship (3 months)" style="--i:0;--c:#d97706"><span class="cert-badge">YBI</span><span class="cert-year">2025</span><h3>AIML with Data Science Internship (3 months)</h3><p>YBI Foundation</p><span class="cert-view">View certificate &#8599;</span></a><a class="cert-card" href="assets/certificates/internships/edunet-microsoft-foundations-of-ai-internship-2025.jpg" target="_blank" rel="noopener" data-title="Foundations of AI Internship (4 weeks)" data-org="Edunet Foundation | Microsoft | AICTE | 10 Apr - 10 May 2025" aria-label="View certificate: Foundations of AI Internship (4 weeks)" style="--i:1;--c:#ff6a00"><span class="cert-badge">EF</span><span class="cert-year">2025</span><h3>Foundations of AI Internship (4 weeks)</h3><p>Edunet Foundation | Microsoft | AICTE</p><span class="cert-view">View certificate &#8599;</span></a><a class="cert-card" href="assets/certificates/internships/infosys-springboard-internship-2024.jpg" target="_blank" rel="noopener" data-title="Infosys Springboard Internship" data-org="Infosys Springboard | 12 Aug 2024" aria-label="View certificate: Infosys Springboard Internship" style="--i:2;--c:#007cc3"><span class="cert-badge">Inf</span><span class="cert-year">2024</span><h3>Infosys Springboard Internship</h3><p>Infosys Springboard</p><span class="cert-view">View certificate &#8599;</span></a><a class="cert-card" href="assets/certificates/internships/global-tech-web-development-internship-2023.jpg" target="_blank" rel="noopener" data-title="Web Development Internship (1 month)" data-org="Global Tech Pvt. Ltd. | 25 Aug 2023" aria-label="View certificate: Web Development Internship (1 month)" style="--i:3;--c:#0f766e"><span class="cert-badge">GT</span><span class="cert-year">2023</span><h3>Web Development Internship (1 month)</h3><p>Global Tech Pvt. Ltd.</p><span class="cert-view">View certificate &#8599;</span></a><a class="cert-card" href="assets/certificates/internships/leadsoft-c-cpp-internship-2023.jpg" target="_blank" rel="noopener" data-title="C and C++ Programming Internship" data-org="LeadSoft IT Solutions | KBPCOES | 6 - 22 Feb 2023" aria-label="View certificate: C and C++ Programming Internship" style="--i:4;--c:#e11d48"><span class="cert-badge">LS</span><span class="cert-year">2023</span><h3>C and C++ Programming Internship</h3><p>LeadSoft IT Solutions | KBPCOES</p><span class="cert-view">View certificate &#8599;</span></a><a class="cert-card" href="assets/certificates/internships/domain-amazon-microsoft-cloud-training-2021.jpg" target="_blank" rel="noopener" data-title="Amazon &amp; Microsoft Cloud Services Training" data-org="DOMAIN Online Industry Training | 2 Aug - 20 Sep 2021" aria-label="View certificate: Amazon &amp; Microsoft Cloud Services Training" style="--i:5;--c:#475569"><span class="cert-badge">DO</span><span class="cert-year">2021</span><h3>Amazon &amp; Microsoft Cloud Services Training</h3><p>DOMAIN Online Industry Training</p><span class="cert-view">View certificate &#8599;</span></a></div><h3 class="cert-group">Programming Courses &amp; Bootcamps <small>12 certificates</small></h3><div class="cert-wall"><a class="cert-card" href="assets/certificates/courses/eduskills-java-full-stack-2025.jpg" target="_blank" rel="noopener" data-title="Java Full Stack" data-org="EduSkills Academy | 17 May 2025" aria-label="View certificate: Java Full Stack" style="--i:0;--c:#16a34a"><span class="cert-badge">ES</span><span class="cert-year">2025</span><h3>Java Full Stack</h3><p>EduSkills Academy</p><span class="cert-view">View certificate &#8599;</span></a><a class="cert-card" href="assets/certificates/courses/eduskills-python-full-stack-2025.jpg" target="_blank" rel="noopener" data-title="Python Full Stack" data-org="EduSkills Academy | 20 Mar 2025" aria-label="View certificate: Python Full Stack" style="--i:1;--c:#16a34a"><span class="cert-badge">ES</span><span class="cert-year">2025</span><h3>Python Full Stack</h3><p>EduSkills Academy</p><span class="cert-view">View certificate &#8599;</span></a><a class="cert-card" href="assets/certificates/courses/nielit-calicut-python-for-beginners-2024.jpg" target="_blank" rel="noopener" data-title="Python for Beginners (5 days)" data-org="NIELIT Calicut | 11 - 15 Sep 2024" aria-label="View certificate: Python for Beginners (5 days)" style="--i:2;--c:#b45309"><span class="cert-badge">NI</span><span class="cert-year">2024</span><h3>Python for Beginners (5 days)</h3><p>NIELIT Calicut</p><span class="cert-view">View certificate &#8599;</span></a><a class="cert-card" href="assets/certificates/courses/infosys-springboard-dbms-part-1-2024.jpg" target="_blank" rel="noopener" data-title="Database Management System (Part 1)" data-org="Infosys Springboard | 15 Jan 2024" aria-label="View certificate: Database Management System (Part 1)" style="--i:3;--c:#007cc3"><span class="cert-badge">Inf</span><span class="cert-year">2024</span><h3>Database Management System (Part 1)</h3><p>Infosys Springboard</p><span class="cert-view">View certificate &#8599;</span></a><a class="cert-card" href="assets/certificates/courses/letsupgrade-javascript-bootcamp-2023.jpg" target="_blank" rel="noopener" data-title="JavaScript Essentials Bootcamp" data-org="Let&#x27;s Upgrade | 14 - 16 Aug 2023" aria-label="View certificate: JavaScript Essentials Bootcamp" style="--i:4;--c:#f97316"><span class="cert-badge">LU</span><span class="cert-year">2023</span><h3>JavaScript Essentials Bootcamp</h3><p>Let&#x27;s Upgrade</p><span class="cert-view">View certificate &#8599;</span></a><a class="cert-card" href="assets/certificates/courses/letsupgrade-java-bootcamp-2023.jpg" target="_blank" rel="noopener" data-title="Java Programming Essentials Bootcamp" data-org="Let&#x27;s Upgrade | 10 - 12 Aug 2023" aria-label="View certificate: Java Programming Essentials Bootcamp" style="--i:5;--c:#f97316"><span class="cert-badge">LU</span><span class="cert-year">2023</span><h3>Java Programming Essentials Bootcamp</h3><p>Let&#x27;s Upgrade</p><span class="cert-view">View certificate &#8599;</span></a><a class="cert-card" href="assets/certificates/courses/letsupgrade-sql-bootcamp-2023.jpg" target="_blank" rel="noopener" data-title="SQL Essentials Bootcamp" data-org="Let&#x27;s Upgrade | 7 - 9 Aug 2023" aria-label="View certificate: SQL Essentials Bootcamp" style="--i:6;--c:#f97316"><span class="cert-badge">LU</span><span class="cert-year">2023</span><h3>SQL Essentials Bootcamp</h3><p>Let&#x27;s Upgrade</p><span class="cert-view">View certificate &#8599;</span></a><a class="cert-card" href="assets/certificates/courses/letsupgrade-html-css-bootcamp-2023.jpg" target="_blank" rel="noopener" data-title="HTML &amp; CSS Essentials Bootcamp" data-org="Let&#x27;s Upgrade | 3 - 5 Aug 2023" aria-label="View certificate: HTML &amp; CSS Essentials Bootcamp" style="--i:7;--c:#f97316"><span class="cert-badge">LU</span><span class="cert-year">2023</span><h3>HTML &amp; CSS Essentials Bootcamp</h3><p>Let&#x27;s Upgrade</p><span class="cert-view">View certificate &#8599;</span></a><a class="cert-card" href="assets/certificates/courses/great-learning-html-2023.jpg" target="_blank" rel="noopener" data-title="Front End Development - HTML" data-org="Great Learning Academy | Aug 2023" aria-label="View certificate: Front End Development - HTML" style="--i:8;--c:#0ea5a4"><span class="cert-badge">GL</span><span class="cert-year">2023</span><h3>Front End Development - HTML</h3><p>Great Learning Academy</p><span class="cert-view">View certificate &#8599;</span></a><a class="cert-card" href="assets/certificates/courses/mtsts-python-programming-2022.jpg" target="_blank" rel="noopener" data-title="Python Programming (3 months, grade A+)" data-org="MTSTS | Apr - Jun 2022" aria-label="View certificate: Python Programming (3 months, grade A+)" style="--i:9;--c:#7c3aed"><span class="cert-badge">MT</span><span class="cert-year">2022</span><h3>Python Programming (3 months, grade A+)</h3><p>MTSTS</p><span class="cert-view">View certificate &#8599;</span></a><a class="cert-card" href="assets/certificates/courses/skillup-intro-to-flutter-2022.jpg" target="_blank" rel="noopener" data-title="Introduction to Flutter" data-org="SkillUP by Simplilearn | 3 May 2022" aria-label="View certificate: Introduction to Flutter" style="--i:10;--c:#0284c7"><span class="cert-badge">SU</span><span class="cert-year">2022</span><h3>Introduction to Flutter</h3><p>SkillUP by Simplilearn</p><span class="cert-view">View certificate &#8599;</span></a><a class="cert-card" href="assets/certificates/courses/mkcl-ms-cit-2019.jpg" target="_blank" rel="noopener" data-title="MS-CIT (Information Technology)" data-org="MKCL | MSBTE | Jun 2019 | 93%" aria-label="View certificate: MS-CIT (Information Technology)" style="--i:11;--c:#ea580c"><span class="cert-badge">MK</span><span class="cert-year">2019</span><h3>MS-CIT (Information Technology)</h3><p>MKCL | MSBTE</p><span class="cert-view">View certificate &#8599;</span></a></div><h3 class="cert-group">Research, Competitions &amp; Workshops <small>8 certificates</small></h3><div class="cert-wall"><a class="cert-card" href="assets/certificates/research/hacknovate-2k25-winner.jpg" target="_blank" rel="noopener" data-title="Hacknovate 2K25 - Winner" data-org="KBPCOES, CSE Dept | IIC | 20 Jun 2025" aria-label="View certificate: Hacknovate 2K25 - Winner" style="--i:0;--c:#f59e0b"><span class="cert-badge">HN</span><span class="cert-year">2025</span><h3>Hacknovate 2K25 - Winner</h3><p>KBPCOES, CSE Dept | IIC</p><span class="cert-view">View certificate &#8599;</span></a><a class="cert-card" href="assets/certificates/research/icaesrta-2k25-paper-presentation.jpg" target="_blank" rel="noopener" data-title="ICAESRTA 2K25 - Paper Presentation" data-org="AICTE-sponsored International Conference, KBPCOES | 13 - 14 Jun 2025" aria-label="View certificate: ICAESRTA 2K25 - Paper Presentation" style="--i:1;--c:#2563eb"><span class="cert-badge">IC</span><span class="cert-year">2025</span><h3>ICAESRTA 2K25 - Paper Presentation</h3><p>AICTE-sponsored International Conference, KBPCOES</p><span class="cert-view">View certificate &#8599;</span></a><a class="cert-card" href="assets/certificates/research/ssdset-2k24-paper-presentation.jpg" target="_blank" rel="noopener" data-title="SSDSET 2K24 - Paper Presentation" data-org="1st International Conference, KBPCOES | 10 Aug 2024" aria-label="View certificate: SSDSET 2K24 - Paper Presentation" style="--i:2;--c:#0891b2"><span class="cert-badge">SS</span><span class="cert-year">2024</span><h3>SSDSET 2K24 - Paper Presentation</h3><p>1st International Conference, KBPCOES</p><span class="cert-view">View certificate &#8599;</span></a><a class="cert-card" href="assets/certificates/research/mega-project-competition-2025.jpg" target="_blank" rel="noopener" data-title="Mega Project Competition" data-org="KBPCOES, CSE Dept | 24 Jun 2025" aria-label="View certificate: Mega Project Competition" style="--i:3;--c:#6366f1"><span class="cert-badge">MP</span><span class="cert-year">2025</span><h3>Mega Project Competition</h3><p>KBPCOES, CSE Dept</p><span class="cert-view">View certificate &#8599;</span></a><a class="cert-card" href="assets/certificates/research/mitu-generative-ai-workshop-2026.jpg" target="_blank" rel="noopener" data-title="Generative AI Workshop" data-org="MITU Skillologies at SIT Pune | 29 Aug - 1 Sep 2026" aria-label="View certificate: Generative AI Workshop" style="--i:4;--c:#1e3a5f"><span class="cert-badge">MI</span><span class="cert-year">2026</span><h3>Generative AI Workshop</h3><p>MITU Skillologies at SIT Pune</p><span class="cert-view">View certificate &#8599;</span></a><a class="cert-card" href="assets/certificates/research/svl-iot-arduino-raspberry-pi-2024.jpg" target="_blank" rel="noopener" data-title="IoT Exploration with Arduino &amp; Raspberry Pi" data-org="SVL Automations at KBPCOES | 19 May 2024" aria-label="View certificate: IoT Exploration with Arduino &amp; Raspberry Pi" style="--i:5;--c:#0ea5e9"><span class="cert-badge">IoT</span><span class="cert-year">2024</span><h3>IoT Exploration with Arduino &amp; Raspberry Pi</h3><p>SVL Automations at KBPCOES</p><span class="cert-view">View certificate &#8599;</span></a><a class="cert-card" href="assets/certificates/research/gd-idol-2k24.jpg" target="_blank" rel="noopener" data-title="GD Idol 2K24 (Certificate of Appreciation)" data-org="KBPCOES Training &amp; Placement | 14 May 2024" aria-label="View certificate: GD Idol 2K24 (Certificate of Appreciation)" style="--i:6;--c:#a855f7"><span class="cert-badge">GD</span><span class="cert-year">2024</span><h3>GD Idol 2K24 (Certificate of Appreciation)</h3><p>KBPCOES Training &amp; Placement</p><span class="cert-view">View certificate &#8599;</span></a><a class="cert-card" href="assets/certificates/research/rubicon-employability-skills-2024.jpg" target="_blank" rel="noopener" data-title="Employability Skills (LifeSkills)" data-org="Rubicon at KBPCOES | 9 - 11 May 2024" aria-label="View certificate: Employability Skills (LifeSkills)" style="--i:7;--c:#dc2626"><span class="cert-badge">RB</span><span class="cert-year">2024</span><h3>Employability Skills (LifeSkills)</h3><p>Rubicon at KBPCOES</p><span class="cert-view">View certificate &#8599;</span></a></div></div></div>
-    </section>
+      <div class="container">
+        <div class="cert-groups">
+          <h3 class="cert-group">Professional Certification <small>1 credential</small></h3>
+          <div class="cert-wall">
+            <a class="cert-card" href="assets/certificates/ai-cloud/oracle-oci-generative-ai-professional-2025.jpg" target="_blank" rel="noopener" data-title="OCI 2025 Certified Generative AI Professional" data-org="Oracle | 26 Aug 2025" aria-label="View certificate: OCI 2025 Certified Generative AI Professional" style="--i:0;--c:#c74634">
+              <span class="cert-badge">OCI</span><span class="cert-year">2025</span>
+              <h3>OCI 2025 Certified Generative AI Professional</h3>
+              <p>Oracle</p><span class="cert-view">View certificate &#8599;</span>
+            </a>
+          </div>
+        </div>
+      </div>    </section>
 
     <section id="contact" class="section">
       <div class="container">
